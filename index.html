@@ -1,10 +1,125 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lab 1</title>
+    <title>My Love for Music</title>
+    <style>
+        /* Style for the table borders */
+        table {
+            border-collapse: collapse;
+            width: 60%;
+            margin: 0 auto;
+        }
+
+        th, td {
+            border: 2px solid #4CAF50; /* Green border */
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        /* Style for the title */
+        h1 {
+            color: pink;
+            text-align: center;
+            text-decoration: underline; /* Underline title */
+        }
+    </style>
+
+    <!-- Adding JavaScript to handle user selection -->
+    <script>
+        function displayGenre() {
+            // Get the selected value from the dropdown
+            var genre = document.getElementById("genreSelect").value;
+            // Display the chosen genre in the paragraph with id "selectedGenre"
+            document.getElementById("selectedGenre").innerHTML = "You selected: " + genre;
+        }
+    </script>
 </head>
 <body>
+
+    <!-- Main Heading for the Webpage -->
+    <h1>My Love for Music</h1>
+
+    <!-- Profile Image with alt text -->
+    <img src="profile.png" alt="Vyshnavi Gavara" width="200"/>
+
+    <!-- Subheadings to Introduce Different Sections -->
+    <h2>Why I Love Music</h2>
+    <p>Music has been my companion through the highs and lows. It speaks to the soul and gives life a rhythm. From soft ballads to energetic rock anthems, music has the power to change the way we feel and express ourselves.</p>
+    
+    <!--Heading three-->
+    <h3>Genres I Enjoy</h3>
+    <!--unordered bulleted list-->
+    <ul>
+        <li>Pop</li>
+        <li>Classical</li>
+        <li>Rock</li>
+    </ul>
+
+    <!-- Blockquote for a Famous Quote -->
+    <blockquote>"People haven't always been there for me, but music always has." - Taylor Swift</blockquote>
+
+    <hr/>
+
+    <!-- Another Section about Personal Preferences -->
+    <h4>More About Music</h4>
+    <p>
+        Music is a universal language that brings people together. Whether you're at a concert or listening with headphones, the emotions conveyed through music can bridge any gap. 
+        <br/><br/>
+        <!--sinle line break-->
+        Check out this amazing track on Amazon Music: 
+        <a href="https://music.amazon.com/" target="_blank">Amazon Music</a>.
+    </p>
+
+    <h5>Want to Learn More About Music?</h5>
+    <p>
+        <!--href for links destination-->
+        Visit <a href="https://www.wikipedia.org/">Wikipedia</a> for more information on your favorite genres.
+    </p>
+
+    <!-- A Table Showing Hobbies -->
+    <h3>My Hobbies Related to Music</h3>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Hobby</th>
+            <th>Last Time I Did This</th>
+        </tr>
+        <tr>
+            <td>Vyshnavi</td>
+            <td>Playing Guitar</td>
+            <td>Last Week</td>
+        </tr>
+        <tr>
+            <td>Vyshnavi</td>
+            <td>Singing</td>
+            <td>Yesterday</td>
+        </tr>
+        <tr>
+            <td>Vyshnavi</td>
+            <td>Attending Concerts</td>
+            <td>Last Month</td>
+        </tr>
+    </table>
+
+    <br/>
+
+    <!-- Centered Select Dropdown -->
+    <center>
+        <h4>Pick Your Favorite Music Genre</h4>
+        <!-- Dropdown for music genre selection -->
+        <select id="genreSelect" onchange="displayGenre()">
+            <option value="Pop">Pop</option>
+            <option value="Classical">Classical</option>
+            <option value="Rock">Rock</option>
+        </select>
+
+        <!-- Paragraph to display selected genre -->
+        <p id="selectedGenre"></p>
+    </center>
+
 </body>
 </html>
